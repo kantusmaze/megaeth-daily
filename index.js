@@ -422,14 +422,12 @@ function printHeader() {
 async function main() {
     while (true) {
         printHeader();
-        const cycleStart = Date.now();
+
         
         await processWallets();
         
-        const elapsed = Date.now() - cycleStart;
-        const delay = Math.max(CYCLE_INTERVAL - elapsed, 0);
-        printStep('⏳', `Next cycle in ${(delay/3600000).toFixed(1)} hours`);
-        await new Promise(resolve => setTimeout(resolve, delay));
+        printStep('⏳', `Next cycle in ${CYCLE_INTERVAL/(1000*60*60)} hours`);
+        await new Promise(resolve => setTimeout(resolve, CYCLE_INTERVAL));
     }
 }
 
