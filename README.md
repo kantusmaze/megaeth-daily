@@ -26,7 +26,7 @@ This is an automated bot that interacts with the MegaETH blockchain to perform a
    ```bash
    git clone https://github.com/ganjsmoke/megaeth-daily.git
    cd megaeth-daily
-   npm install web3@1.8.0
+   npm install web3@1.10.0
    ```
 
 ### Configuration
